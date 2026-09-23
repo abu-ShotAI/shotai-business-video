@@ -8,15 +8,15 @@
 
 ## 实际制作案例
 
-以下为用户已完成的南浔民宿视频，也是本技能提炼所依据的实作案例。两条均为 **中文 Serena 旁白、16:9横屏**，不作为英文或竖屏演示。可直接播放，也提供仓库内MP4副本。
+以下为用户已完成的南浔民宿视频，也是本技能提炼所依据的实作案例。两条均为 **中文 Serena 旁白、16:9横屏**，不作为英文或竖屏演示。点击下方封面可打开对应MP4文件，也可通过视频链接下载。
 
 ### 1. 把周末留给休息
 
 **58.57秒 · 38镜 · 每镜1–2秒。** 都市上班族的周末放松视角，配轻柔吉他。
 
-https://github.com/user-attachments/assets/31d9a406-c23d-4756-81d4-076114994406
+[![A weekend to rest — video preview](docs/examples/weekend-reset.jpg)](docs/examples/weekend-reset.mp4)
 
-[观看或下载MP4](docs/examples/weekend-reset.mp4) · [封面](docs/examples/weekend-reset.jpg)
+[打开MP4](docs/examples/weekend-reset.mp4) · [下载MP4](https://raw.githubusercontent.com/abu-ShotAI/shotai-business-video/main/docs/examples/weekend-reset.mp4) · [封面](docs/examples/weekend-reset.jpg)
 
 配乐：**Clear Air — Kevin MacLeod**（[官方来源](https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100626)），按 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) 使用；进行了节选、淡入淡出、音量调整与旁白混音。
 
@@ -24,9 +24,9 @@ https://github.com/user-attachments/assets/31d9a406-c23d-4756-81d4-076114994406
 
 **68.93秒 · 44镜 · 每镜1–2秒。** 慢旅行者关注空间、早餐和茶饮的视角，已优化首句节奏并加入轻柔钢琴。
 
-https://github.com/user-attachments/assets/4b476ab9-2685-42ee-afb3-17863197647b
+[![Make the stay part of the journey — video preview](docs/examples/slow-stay-details.jpg)](docs/examples/slow-stay-details.mp4)
 
-[观看或下载MP4](docs/examples/slow-stay-details.mp4) · [封面](docs/examples/slow-stay-details.jpg)
+[打开MP4](docs/examples/slow-stay-details.mp4) · [下载MP4](https://raw.githubusercontent.com/abu-ShotAI/shotai-business-video/main/docs/examples/slow-stay-details.mp4) · [封面](docs/examples/slow-stay-details.jpg)
 
 配乐：**Meditation Impromptu 01 — Kevin MacLeod**（[官方来源](https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100163)），按 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) 使用；进行了节选、淡入淡出、音量调整与旁白混音。
 

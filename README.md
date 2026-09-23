@@ -8,15 +8,15 @@ Turn approved business copy and your own footage into narrated Douyin or TikTok 
 
 ## Real production examples
 
-These are the user's actual Nanxun guesthouse videos from the workflow that informed this skill. Both use **Chinese Serena narration and a 16:9 layout**; they are not examples of English or vertical output. Click play below; compact [MP4 copies](docs/examples/) are also available in the repository.
+These are the user's actual Nanxun guesthouse videos from the workflow that informed this skill. Both use **Chinese Serena narration and a 16:9 layout**; they are not examples of English or vertical output. Click a preview image to open its MP4 file, or use the video links below. The repository contains compact web copies.
 
 ### 1. A weekend to rest / 把周末留给休息
 
 **58.57 seconds · 38 shots · 1–2 seconds per shot.** An urban worker's weekend-reset perspective, with gentle guitar beneath the narration.
 
-https://github.com/user-attachments/assets/31d9a406-c23d-4756-81d4-076114994406
+[![A weekend to rest — video preview](docs/examples/weekend-reset.jpg)](docs/examples/weekend-reset.mp4)
 
-[Watch or download MP4](docs/examples/weekend-reset.mp4) · [Poster](docs/examples/weekend-reset.jpg)
+[Open MP4](docs/examples/weekend-reset.mp4) · [Download MP4](https://raw.githubusercontent.com/abu-ShotAI/shotai-business-video/main/docs/examples/weekend-reset.mp4) · [Poster](docs/examples/weekend-reset.jpg)
 
 Music: **Clear Air — Kevin MacLeod** ([official source](https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100626)), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Excerpted, faded, level-adjusted and mixed under narration.
 
@@ -24,9 +24,9 @@ Music: **Clear Air — Kevin MacLeod** ([official source](https://incompetech.co
 
 **68.93 seconds · 44 shots · 1–2 seconds per shot.** A slow traveler's view of the rooms, breakfast and tea, with a tightened opening and gentle piano.
 
-https://github.com/user-attachments/assets/4b476ab9-2685-42ee-afb3-17863197647b
+[![Make the stay part of the journey — video preview](docs/examples/slow-stay-details.jpg)](docs/examples/slow-stay-details.mp4)
 
-[Watch or download MP4](docs/examples/slow-stay-details.mp4) · [Poster](docs/examples/slow-stay-details.jpg)
+[Open MP4](docs/examples/slow-stay-details.mp4) · [Download MP4](https://raw.githubusercontent.com/abu-ShotAI/shotai-business-video/main/docs/examples/slow-stay-details.mp4) · [Poster](docs/examples/slow-stay-details.jpg)
 
 Music: **Meditation Impromptu 01 — Kevin MacLeod** ([official source](https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100163)), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Excerpted, faded, level-adjusted and mixed under narration.
 

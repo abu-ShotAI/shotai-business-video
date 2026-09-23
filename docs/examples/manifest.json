@@ -28,7 +28,9 @@
       },
       "rights": "Display only; media is excluded from repository MIT license.",
       "repository_video_url": "https://github.com/abu-ShotAI/shotai-business-video/blob/main/docs/examples/weekend-reset.mp4",
-      "raw_download_url": "https://raw.githubusercontent.com/abu-ShotAI/shotai-business-video/main/docs/examples/weekend-reset.mp4"
+      "raw_download_url": "https://raw.githubusercontent.com/abu-ShotAI/shotai-business-video/main/docs/examples/weekend-reset.mp4",
+      "inline_video_url": "https://github.com/user-attachments/assets/4e346fcc-edd9-48c1-bbdb-3a33e30f3384",
+      "inline_video_verified_anonymous": true
     },
     {
       "title": "把住处也当作旅程",
@@ -58,7 +60,9 @@
       },
       "rights": "Display only; media is excluded from repository MIT license.",
       "repository_video_url": "https://github.com/abu-ShotAI/shotai-business-video/blob/main/docs/examples/slow-stay-details.mp4",
-      "raw_download_url": "https://raw.githubusercontent.com/abu-ShotAI/shotai-business-video/main/docs/examples/slow-stay-details.mp4"
+      "raw_download_url": "https://raw.githubusercontent.com/abu-ShotAI/shotai-business-video/main/docs/examples/slow-stay-details.mp4",
+      "inline_video_url": "https://github.com/user-attachments/assets/b3c42749-7872-4aab-86a3-2302c9a12cc0",
+      "inline_video_verified_anonymous": true
     },
     {
       "title": "Your weekend, at a slower pace",
@@ -91,8 +95,11 @@
       },
       "production": "Actual installed skill run with live ShotAIClient, voice.py, align_captions.py, render_video.py and mix_audio.py",
       "review_status": "Visual and technical checks passed; proper-name pronunciation pending listening",
-      "rights": "Display only; media excluded from repository MIT license."
+      "rights": "Display only; media excluded from repository MIT license.",
+      "inline_video_url": "https://github.com/user-attachments/assets/e68fa9ce-2b94-46c9-86fc-a12b413e9f52",
+      "inline_video_verified_anonymous": true
     }
   ],
-  "media_in_install_archives": false
+  "media_in_install_archives": false,
+  "readme_presentation": "GitHub native inline video players with repository downloads retained"
 }

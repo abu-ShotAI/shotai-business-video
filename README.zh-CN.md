@@ -8,13 +8,13 @@
 
 ## 实际制作案例
 
-前两条为技能提炼所依据的中文横屏实作；第三条是**实际运行本技能新制作的英文9:16 TikTok示例**。点击封面可打开对应MP4文件，也可通过视频链接下载。
+前两条为技能提炼所依据的中文横屏实作；第三条是**实际运行本技能新制作的英文9:16 TikTok示例**。可在下方直接播放三个视频，也保留MP4下载链接。
 
 ### 1. 把周末留给休息
 
 **58.57秒 · 38镜 · 每镜1–2秒。** 都市上班族的周末放松视角，配轻柔吉他。
 
-[![A weekend to rest — video preview](docs/examples/weekend-reset.jpg)](docs/examples/weekend-reset.mp4)
+https://github.com/user-attachments/assets/4e346fcc-edd9-48c1-bbdb-3a33e30f3384
 
 [打开MP4](docs/examples/weekend-reset.mp4) · [下载MP4](https://raw.githubusercontent.com/abu-ShotAI/shotai-business-video/main/docs/examples/weekend-reset.mp4) · [封面](docs/examples/weekend-reset.jpg)
 
@@ -24,7 +24,7 @@
 
 **68.93秒 · 44镜 · 每镜1–2秒。** 慢旅行者关注空间、早餐和茶饮的视角，已优化首句节奏并加入轻柔钢琴。
 
-[![Make the stay part of the journey — video preview](docs/examples/slow-stay-details.jpg)](docs/examples/slow-stay-details.mp4)
+https://github.com/user-attachments/assets/b3c42749-7872-4aab-86a3-2302c9a12cc0
 
 [打开MP4](docs/examples/slow-stay-details.mp4) · [下载MP4](https://raw.githubusercontent.com/abu-ShotAI/shotai-business-video/main/docs/examples/slow-stay-details.mp4) · [封面](docs/examples/slow-stay-details.jpg)
 
@@ -36,7 +36,7 @@
 
 **50.57秒 · 32镜 · 1080×1920竖屏原片 · 英文旁白与字幕。** 本次实际运行已安装技能：实时ShotAI MCP检索导出、Jenny英文配音(+5%)、词级字幕对齐、逐镜竖屏裁切与轻柔器乐混音。
 
-[![英文TikTok竖屏案例](docs/examples/english-tiktok-slow-weekend.jpg)](docs/examples/english-tiktok-slow-weekend.mp4)
+https://github.com/user-attachments/assets/e68fa9ce-2b94-46c9-86fc-a12b413e9f52
 
 [打开MP4](docs/examples/english-tiktok-slow-weekend.mp4) · [下载MP4](https://raw.githubusercontent.com/abu-ShotAI/shotai-business-video/main/docs/examples/english-tiktok-slow-weekend.mp4) · [英文稿](docs/examples/english-tiktok-script.txt) · [SRT字幕](docs/examples/english-tiktok.srt)
 

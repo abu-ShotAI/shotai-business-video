@@ -1,0 +1,13 @@
+{
+  "business": {"name": "", "category": "restaurant_or_stay_or_local_shop", "branch": "", "shotai_collection_ids": []},
+  "versions": [
+    {"language": "zh", "platform": "douyin", "script_file": "script.zh.txt", "voice": {"provider": null, "voice": null, "selection": "owner_selects", "tempo": 1.0}},
+    {"language": "en", "platform": "tiktok", "script_file": "script.en.txt", "voice": {"provider": null, "voice": null, "selection": "owner_selects", "tempo": 1.0}}
+  ],
+  "output": {"width": 1080, "height": 1920, "fps": 30, "preferred_seconds": 60, "duration_range_seconds": [35, 80]},
+  "copy_policy": "locked_verbatim",
+  "footage_policy": "live_shotai_mcp_only_for_selection",
+  "music": {"choice": "owner_selects_or_authorizes_agent", "file": null, "license_manifest": null, "usage": "organic"},
+  "delivery": {"publish": false, "include_subtitles": true, "include_attribution": true},
+  "notes": "Remove unrequested language versions. The agent fills this internal brief from normal conversation."
+}

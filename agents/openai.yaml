@@ -1,0 +1,4 @@
+interface:
+  display_name: "ShotAI 商家短视频"
+  short_description: "固定文案自动匹配自有素材，选配音与音乐，制作商家中英文信息流视频"
+  default_prompt: "使用 $shotai-business-video，将我的固定文案和 ShotAI 素材生成带配音、字幕和配乐的竖屏短视频。"

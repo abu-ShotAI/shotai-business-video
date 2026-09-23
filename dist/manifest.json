@@ -1,0 +1,30 @@
+{
+  "version": "1.0.0",
+  "packages": [
+    {
+      "file": "shotai-business-video-zh.zip",
+      "language": "zh",
+      "bytes": 81919,
+      "sha256": "1e202cc5450af3dd082400af6dbedb257dff1be0eea3acd9b204193d403c1aed"
+    },
+    {
+      "file": "shotai-business-video-zh.skill",
+      "language": "zh",
+      "bytes": 81919,
+      "sha256": "1e202cc5450af3dd082400af6dbedb257dff1be0eea3acd9b204193d403c1aed"
+    },
+    {
+      "file": "shotai-business-video-en.zip",
+      "language": "en",
+      "bytes": 80686,
+      "sha256": "3db0e1c0b29c474f2453cbf5dbf6f0a828203089f8124c17ec8bc8f3d19f10a8"
+    },
+    {
+      "file": "shotai-business-video-en.skill",
+      "language": "en",
+      "bytes": 80686,
+      "sha256": "3db0e1c0b29c474f2453cbf5dbf6f0a828203089f8124c17ec8bc8f3d19f10a8"
+    }
+  ],
+  "install_one_language_package": true
+}

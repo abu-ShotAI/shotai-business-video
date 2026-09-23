@@ -8,7 +8,7 @@ Turn approved business copy and your own footage into narrated Douyin or TikTok 
 
 ## Real production examples
 
-These are the user's actual Nanxun guesthouse videos from the workflow that informed this skill. Both use **Chinese Serena narration and a 16:9 layout**; they are not examples of English or vertical output. Click a preview image to open its MP4 file, or use the video links below. The repository contains compact web copies.
+The first two examples are Chinese landscape productions from the workflow that informed this skill. The third is a new **English 9:16 TikTok example made by running the installed skill**. Click a preview image to open its MP4 file, or use the video links below. The repository contains compact web copies.
 
 ### 1. A weekend to rest / 把周末留给休息
 
@@ -30,7 +30,21 @@ Music: **Clear Air — Kevin MacLeod** ([official source](https://incompetech.co
 
 Music: **Meditation Impromptu 01 — Kevin MacLeod** ([official source](https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100163)), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Excerpted, faded, level-adjusted and mixed under narration.
 
-The examples reuse previously selected footage from an indexed ShotAI library; the second video's revised opening used two fresh MCP searches/exports. They predate the packaged helpers. Web previews are 960×540 copies of the 1080p originals with the audio and duration preserved. **Example media is displayed with user authorization and is not licensed under the code's MIT license.** [Production details and media credits](docs/examples/CREDITS.md).
+The two Chinese examples reuse previously selected footage from an indexed ShotAI library; the second video's revised opening used two fresh MCP searches/exports. These two predate the packaged helpers. Their web previews are 960×540 copies of the 1080p originals with audio and duration preserved.
+
+### 3. Your weekend, at a slower pace — English TikTok
+
+**50.57 seconds · 32 shots · 1080×1920 master · English narration and captions.** Created with the installed skill: live ShotAI MCP retrieval/export, Edge Jenny narration at +5%, word-level caption alignment, individually reviewed portrait crops and quiet instrumental music.
+
+[![English TikTok example — vertical video preview](docs/examples/english-tiktok-slow-weekend.jpg)](docs/examples/english-tiktok-slow-weekend.mp4)
+
+[Open MP4](docs/examples/english-tiktok-slow-weekend.mp4) · [Download MP4](https://raw.githubusercontent.com/abu-ShotAI/shotai-business-video/main/docs/examples/english-tiktok-slow-weekend.mp4) · [English script](docs/examples/english-tiktok-script.txt) · [SRT](docs/examples/english-tiktok.srt)
+
+All selected clips were freshly verified and exported through the skill's MCP client; 24 distinct source clips fill 32 shots of 1–2 seconds. The web copy is 540×960. The initial ASR omitted part of the recording and was rejected before repair. Final transcription covers the whole script; the place name Nanxun remains a pronunciation listening-check item. Visual and technical checks passed; no subjective listening approval is claimed.
+
+Music: **Clear Air — Kevin MacLeod** ([official source](https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100626)), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Excerpted, faded, level-adjusted and mixed under narration with speech ducking.
+
+**Example media is displayed with user authorization and is not licensed under the code's MIT license.** [Production details and media credits](docs/examples/CREDITS.md). No example was posted to a TikTok account by this workflow.
 
 ## Start here: prepare the footage library
 

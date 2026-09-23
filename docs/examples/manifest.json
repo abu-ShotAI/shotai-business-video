@@ -59,6 +59,39 @@
       "rights": "Display only; media is excluded from repository MIT license.",
       "repository_video_url": "https://github.com/abu-ShotAI/shotai-business-video/blob/main/docs/examples/slow-stay-details.mp4",
       "raw_download_url": "https://raw.githubusercontent.com/abu-ShotAI/shotai-business-video/main/docs/examples/slow-stay-details.mp4"
+    },
+    {
+      "title": "Your weekend, at a slower pace",
+      "video": "english-tiktok-slow-weekend.mp4",
+      "poster": "english-tiktok-slow-weekend.jpg",
+      "repository_video_url": "https://github.com/abu-ShotAI/shotai-business-video/blob/main/docs/examples/english-tiktok-slow-weekend.mp4",
+      "raw_download_url": "https://raw.githubusercontent.com/abu-ShotAI/shotai-business-video/main/docs/examples/english-tiktok-slow-weekend.mp4",
+      "seconds": 50.566667,
+      "shots": 32,
+      "unique_source_clips": 24,
+      "language": "en",
+      "voice": "Edge en-US-JennyNeural +5%",
+      "aspect_ratio": "9:16",
+      "preview_resolution": [
+        540,
+        960
+      ],
+      "original_resolution": [
+        1080,
+        1920
+      ],
+      "fps": 30,
+      "sha256": "ef5ee82b16281ede2165660442af89c49f33e9c867f93cfc62ce8d512aff591b",
+      "music": {
+        "title": "Clear Air",
+        "author": "Kevin MacLeod",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "source": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100626"
+      },
+      "production": "Actual installed skill run with live ShotAIClient, voice.py, align_captions.py, render_video.py and mix_audio.py",
+      "review_status": "Visual and technical checks passed; proper-name pronunciation pending listening",
+      "rights": "Display only; media excluded from repository MIT license."
     }
   ],
   "media_in_install_archives": false

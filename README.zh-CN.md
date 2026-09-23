@@ -8,7 +8,7 @@
 
 ## 实际制作案例
 
-以下为用户已完成的南浔民宿视频，也是本技能提炼所依据的实作案例。两条均为 **中文 Serena 旁白、16:9横屏**，不作为英文或竖屏演示。点击下方封面可打开对应MP4文件，也可通过视频链接下载。
+前两条为技能提炼所依据的中文横屏实作；第三条是**实际运行本技能新制作的英文9:16 TikTok示例**。点击封面可打开对应MP4文件，也可通过视频链接下载。
 
 ### 1. 把周末留给休息
 
@@ -30,7 +30,21 @@
 
 配乐：**Meditation Impromptu 01 — Kevin MacLeod**（[官方来源](https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100163)），按 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) 使用；进行了节选、淡入淡出、音量调整与旁白混音。
 
-案例沿用已入库ShotAI素材的既有选镜记录，第二条开头两镜在修订时重新通过实时MCP检索和导出，制作先于技能工具打包。网页提供1080p原片的960×540预览副本，声音和时长保留。**视频与封面经用户授权展示，不自动适用代码的MIT许可。** [制作信息与素材署名](docs/examples/CREDITS.md)。
+前两条沿用既有选镜记录，第二条开头两镜在修订时经实时MCP检索导出；它们制作先于技能工具打包。网页提供1080p原片的960×540预览副本，声音和时长保留。
+
+### 3. 英文 TikTok｜Your weekend, at a slower pace
+
+**50.57秒 · 32镜 · 1080×1920竖屏原片 · 英文旁白与字幕。** 本次实际运行已安装技能：实时ShotAI MCP检索导出、Jenny英文配音(+5%)、词级字幕对齐、逐镜竖屏裁切与轻柔器乐混音。
+
+[![英文TikTok竖屏案例](docs/examples/english-tiktok-slow-weekend.jpg)](docs/examples/english-tiktok-slow-weekend.mp4)
+
+[打开MP4](docs/examples/english-tiktok-slow-weekend.mp4) · [下载MP4](https://raw.githubusercontent.com/abu-ShotAI/shotai-business-video/main/docs/examples/english-tiktok-slow-weekend.mp4) · [英文稿](docs/examples/english-tiktok-script.txt) · [SRT字幕](docs/examples/english-tiktok.srt)
+
+全部选中镜头均经本次实时MCP核验和新导出，24个不同源组成32镜，每镜1–2秒，网页副本540×960。第一次ASR漏识别后半段，技能对齐器已阻断；修复后全文覆盖。Nanxun地名仍列为发音听审项；已做画面与技术检查，不将ASR通过等同人工听感验收。
+
+配乐：**Clear Air — Kevin MacLeod**（[官方来源](https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100626)），按 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) 使用；进行了节选、淡入淡出、音量调整及人声混音，讲话时压低配乐。
+
+**视频与封面经用户授权展示，不自动适用代码的MIT许可。** [制作信息与素材署名](docs/examples/CREDITS.md)。本流程没有向TikTok账号发布视频。
 
 ## 第一次使用：先准备素材库
 

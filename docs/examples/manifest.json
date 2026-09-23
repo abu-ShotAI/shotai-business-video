@@ -97,7 +97,15 @@
       "review_status": "Visual and technical checks passed; proper-name pronunciation pending listening",
       "rights": "Display only; media excluded from repository MIT license.",
       "inline_video_url": "https://github.com/user-attachments/assets/e68fa9ce-2b94-46c9-86fc-a12b413e9f52",
-      "inline_video_verified_anonymous": true
+      "inline_video_verified_anonymous": true,
+      "inline_playback_check": {
+        "date": "2026-09-24",
+        "browser_playback_observed_seconds": 15,
+        "anonymous_complete_download_bytes": 6500751,
+        "content_matches_repository": true,
+        "full_decode_pass": true,
+        "finding": "Playback succeeded in this check; an earlier Range request transiently timed out, cause not established."
+      }
     }
   ],
   "media_in_install_archives": false,

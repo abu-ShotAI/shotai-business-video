@@ -1,6 +1,8 @@
 # ShotAI Business Video
 
-[中文说明](README.zh-CN.md) · [Download ShotAI](https://www.shotai.io) · [English skill package](dist/shotai-business-video-en.zip) · [中文技能包](dist/shotai-business-video-zh.zip)
+[English](README.md) | [简体中文](README.zh-CN.md)
+
+[Download skill](dist/shotai-business-video.zip) · [Download ShotAI](https://www.shotai.io) · [Optional Chinese edition](dist/shotai-business-video-zh.zip)
 
 Turn approved business copy and your own footage into narrated Douyin or TikTok videos. Built for independent restaurants, cafés, guesthouses, hotels and local shops, with selectable voices and licensed background music.
 
@@ -10,7 +12,7 @@ Turn approved business copy and your own footage into narrated Douyin or TikTok 
 
 The first two examples are Chinese landscape productions from the workflow that informed this skill. The third is a new **English 9:16 TikTok example made by running the installed skill**. Play each video directly below. Download links remain available as an alternative.
 
-### 1. A weekend to rest / 把周末留给休息
+### 1. A weekend to rest
 
 **58.57 seconds · 38 shots · 1–2 seconds per shot.** An urban worker's weekend-reset perspective, with gentle guitar beneath the narration.
 
@@ -20,7 +22,7 @@ https://github.com/user-attachments/assets/4e346fcc-edd9-48c1-bbdb-3a33e30f3384
 
 Music: **Clear Air — Kevin MacLeod** ([official source](https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100626)), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Excerpted, faded, level-adjusted and mixed under narration.
 
-### 2. Make the stay part of the journey / 把住处也当作旅程
+### 2. Make the stay part of the journey
 
 **68.93 seconds · 44 shots · 1–2 seconds per shot.** A slow traveler's view of the rooms, breakfast and tea, with a tightened opening and gentle piano.
 
@@ -36,7 +38,9 @@ The two Chinese examples reuse previously selected footage from an indexed ShotA
 
 **50.57 seconds · 32 shots · 1080×1920 master · English narration and captions.** Created with the installed skill: live ShotAI MCP retrieval/export, Edge Jenny narration at +5%, word-level caption alignment, individually reviewed portrait crops and quiet instrumental music.
 
-https://github.com/user-attachments/assets/e68fa9ce-2b94-46c9-86fc-a12b413e9f52
+<video src="https://github.com/user-attachments/assets/e68fa9ce-2b94-46c9-86fc-a12b413e9f52" controls="controls" width="360">
+  <a href="docs/examples/english-tiktok-slow-weekend.mp4">Open the English TikTok video</a>
+</video>
 
 [Open MP4](docs/examples/english-tiktok-slow-weekend.mp4) · [Download MP4](https://raw.githubusercontent.com/abu-ShotAI/shotai-business-video/main/docs/examples/english-tiktok-slow-weekend.mp4) · [English script](docs/examples/english-tiktok-script.txt) · [SRT](docs/examples/english-tiktok.srt)
 
@@ -59,15 +63,25 @@ If search is empty, first check that the client/service is running, the right co
 
 ## Install this skill
 
-Download either the [English](dist/shotai-business-video-en.zip) or [Chinese](dist/shotai-business-video-zh.zip) package. They share the same skill name and scripts, so install **one**, not both. Extract the included shotai-business-video folder into your agent's skill directory; for Codex this is normally ~/.codex/skills/. Start a new session and invoke $shotai-business-video.
+Download the [default skill package](dist/shotai-business-video.zip). The main skill and reference documentation are in English; [Chinese documentation](README.zh-CN.md) and an [optional Chinese-entry package](dist/shotai-business-video-zh.zip) are available separately. Extract the included shotai-business-video folder into your agent's skill directory; for Codex this is normally ~/.codex/skills/. Start a new session and invoke $shotai-business-video.
 
-Alternatively, install from the repository with a skill installer that accepts GitHub repositories. Both entry languages support separate Chinese and English video outputs.
+Alternatively, install from this repository with a compatible skill installer. Install **one copy**: all editions use the same skill name and scripts. Documentation language does not select the video's language.
+
+### Language options
+
+| Choice | What it controls |
+|---|---|
+| Documentation | English by default; switch to Chinese when helpful |
+| Conversation | The agent replies in the owner's preferred language |
+| Video output | English, Chinese, or both as separate narrated/captioned videos |
+
+Request the output language in your prompt. For both languages, provide two approved scripts or ask the agent to prepare a separate translation for review. No second skill installation is needed.
 
 ## Ask in ordinary language
 
 > Use $shotai-business-video to turn my approved café script into a 60-second vertical TikTok video. Use only my Willow Café collection. Let me choose between two English voices and quiet licensed instrumental tracks. Keep the script and prices exactly as supplied.
 
-> 用 $shotai-business-video，把我的固定文案和 ShotAI 里的本店素材做成抖音竖屏视频。先给两个中文音色试听，配乐用轻柔纯音乐，不改文案和套餐价格。
+> Make separate English and Chinese versions from my two approved scripts. Use the same property's ShotAI collection, let me choose the voices, and keep the music quiet beneath the narration.
 
 The agent handles the internal timeline and manifests. Owners do not need to write JSON.
 

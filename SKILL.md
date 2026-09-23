@@ -1,86 +1,85 @@
 ---
 name: shotai-business-video
-description: 基于商家固定文案，通过 ShotAI MCP 实时检索并自动填充自有素材，选配 TTS、同步字幕与有授权的背景音乐，制作餐饮、民宿、酒店和本地店铺的抖音/TikTok信息流短视频。Use for script-led small-business videos assembled from an indexed ShotAI library, including Chinese and English versions, and revisions to videos produced by this workflow.
+description: Create or revise script-led Douyin and TikTok videos for restaurants, guesthouses, hotels and local shops using live ShotAI MCP retrieval from an indexed owner footage library, selectable narration, aligned captions and licensed music. Supports separate Chinese and English versions.
 metadata:
-  short-description: 固定文案 → ShotAI素材 → 可选配音和音乐 → 中英文商家短视频
+  short-description: Approved script to business video with ShotAI, voice and music
 ---
 
-# ShotAI 商家短视频
+# ShotAI Business Video
 
-面向有自己素材的餐厅、民宿、酒店和本地店铺经营者，把已确定的文案做成能直接审看的成片。商家用日常语言给出文案、素材库和声音偏好，代理完成选镜、配音、字幕、配乐和检查。
+Produce ready-to-review Douyin or TikTok feed videos for independent restaurants, cafés, guesthouses, hotels and local shops. The owner supplies approved copy and an indexed ShotAI footage library. The agent matches real footage, offers selectable narration and music, aligns captions and renders the result.
 
-**先下载 [ShotAI 客户端](https://www.shotai.io)，准备素材库：** 安装客户端 → 创建本店集合 → 导入有权使用的视频 → 等待镜头分析与索引完成 → 在客户端启用 MCP 并连接到代理，运行时保持客户端及 MCP 服务可用 → 用 `list_collections` 和本店集合内的一条 `search_shots` 确认素材可搜。详细步骤见 [安装与开始](references/setup.md)。
+**First, download the [ShotAI desktop client](https://www.shotai.io) and prepare its library:** install the client → create a collection for the business → import videos the owner has the right to use → wait for shot analysis and indexing to finish → enable MCP in the client and connect the agent, keeping the client and MCP service available during use → call `list_collections` and run one `search_shots` query within the business's collection to confirm retrieval. See [Setup](references/setup.md) for details.
 
-仅在硬盘上存有视频、安装本技能或提供文件路径，都不会让 MCP 自动找到素材。缺素材或搜索无结果时，先检查客户端/服务、集合和索引状态。
+Videos stored only on disk, installing this skill, or supplying file paths do not make footage searchable through MCP. If footage is missing or search returns no results, check the client/service, collection and indexing status first.
 
-**英文完整流程：**[English workflow](references/workflow.en.md)。按用户语言沟通；技能有中英文说明，也支持分别生成中文与英文视频。一次请求一条就做一条，不默认扩成多个人设或批量版本。
+Use ordinary language with the owner. Technical manifests are internal production records, not forms the owner must understand. Respect scope: one requested video is not an unsolicited batch.
 
-## 输入与默认值
+## Language options
 
-优先从当前任务获取已确认信息，仅补问缺失的关键项：
+English is the default documentation language. Use [the complete Chinese workflow](references/workflow.zh.md) and its Chinese references only when useful; do not load both translations by default. Communicate in the user’s language. Set video output language independently to Chinese (`zh`), English (`en`), or separate versions (`both`), and choose the target platform separately. English instructions do not imply English-only video output. Both installation packages use the same skill name and runtime; install only one.
 
-- **固定文案**：粘贴文字或指定文件。保留原文、顺序、价格和事实；文案及 SHA-256 是字幕和配音基准。没有文案时可另拟一版让用户定稿，不编造亲身到店经历。
-- **店铺与 ShotAI 集合**：用 MCP 返回的集合 ID 明确店铺、分店、房型或菜品范围，不能把别家设施当作本店。
-- **语言与平台**：中文/抖音、英文/TikTok，或分别两版。默认竖屏 1080×1920、30 fps；用户已有横屏等规格优先。
-- **声音与音乐**：支持指定音色/模型、自有录音、自带配乐或无配乐。沿用本任务已选项，不重复询问。
+## Brief and defaults
 
-一般目标 35–80 秒、约一分钟，通常每镜 1–2 秒。**固定文案优先于默认时长**：先实测；过长可提供适度语速或超时版本，需要删改由用户选择，不默默截句。中英各自合成、测时、配字幕，不能只替换字幕冒充英文版。用户给单语稿而要双语时保留原稿，另存译稿供核对，不擅改价格币种、地名或优惠条件。
+Recover existing choices first. Obtain only missing essentials: locked script, business/branch and ShotAI collections, video language and platform, voice and music preferences. Accept a specified voice/model, an existing recording, a supplied licensed music track or no music; retain choices already made in the task. Default to 1080×1920 at 30 fps, about a minute (normally 35–80 seconds), with roughly 1–2 seconds per shot. Explicit user specifications override defaults.
 
-初次声音选择提供 2–3 个同文、同响度的 8–15 秒样本即可。用户说“帮我选”则直接按品牌选择并说明；确定后完成整片，不重复索要流程确认。模板见 [brief-template.json](assets/brief-template.json)，商家用法见 [examples.md](references/examples.md)。
+Preserve approved wording, order, prices, names and claims. Save the exact text and SHA-256 as the narration and caption baseline. If it is too long, measure narration and offer reasonable speed or a longer version; do not silently cut copy. If drafting is requested, identify a speaker perspective, one pain point and one need without inventing a personal visit.
 
-## 制作流程
+For bilingual delivery, create separate Chinese and English narration, caption timings and final videos. Translated subtitles over Chinese audio are not an English version. Save translations separately; do not silently localize currency, offers or place names. Resolve material ambiguities. Use [Business prompts](references/examples.md) for common requests and [brief-template.json](assets/brief-template.json) for the internal brief.
 
-### 1. 实时连接 ShotAI
+## Workflow
 
-读 [ShotAI MCP](references/shotai-mcp.md)。完成上述素材库准备后，优先现成 MCP 工具；未挂载时使用附带回环 SSE 客户端。真实调用 `tools/list`、`list_collections`，选择本店集合，做一次检索确认并留存结果。
+### Connect to ShotAI
 
-**MCP 是选材主路径。**连接失败时报告具体阻塞，继续可独立完成的稿件/声音准备；不得悄悄改成文件名猜测或旧目录匹配，更不能把缓存描述成本次实时调用。用户明确同意离线复用时才用已验证缓存并标明模式。仅调整音乐或语速、且不换镜时，不必为形式重新搜索全库。
+Read [ShotAI MCP](references/shotai-mcp.md). After preparing the library above, prefer exposed MCP tools; use the bundled loopback SSE client only when needed. Make actual discovery and collection calls for this job, then confirm retrieval with a search. Scope collection IDs to the correct business, branch, room or menu, and retain the results.
 
-### 2. 固定文案，选择并生成声音
+Live MCP retrieval is the selection path. If unavailable, report the concrete blocker and continue independent script/audio work. Do not silently use filename matching or describe cached results as live. Offline cache reuse needs the user's explicit choice and must be labelled. Audio-only changes that select no footage need no new search.
 
-理解角色视角、一个痛点、一个需求和主要卖点；有固定稿时只作内部理解，不据此重写。读 [TTS与配乐](references/voice-music.md)，使用 `scripts/voice.py` 或已配置提供商。声音列表以当前实际可用项为准；Serena +10% 只是本案例偏好，不是所有用户默认。
+### Choose and synthesize narration
 
-整句/整篇连续合成，必要时按长自然段分块，不按每个镜头拼短句。保存原生声音、最终旁白、模型/音色/文本哈希/速度/时长。公共演示不保证生产可用；明确配额错误即停止，不绕限额或擅换音色。准确区分已完成与待完成。
+Read [Voice and music](references/voice-music.md). Accept a selected provider/voice, existing recording, or permission to choose. When the owner wants to select, provide 2–3 short 8–15 second samples with identical text and comparable loudness. Reuse prior choices without repeated approval. If the user asks the agent to choose, select a suitable option, state the choice and proceed; do not add a selection gate.
 
-### 3. 声音先定时，再对齐字幕和镜头
+Synthesize connected sentences or the full script. Use long natural paragraphs only when chunking is necessary; never one audio fragment per 1-second shot. Save original/final audio, provider/model/voice settings, text hash, speed and measured length. Choose from voices actually available now; Serena at +10% was a past project preference, not a universal default. A public Qwen demo is an audition option, not a production guarantee. Stop on quota exhaustion; never change voices or identities silently.
 
-使用最终旁白的词级 ASR 或提供商时间戳，按音频内容哈希缓存。已有本地模型可复用；不需要重新转写的修订直接映射旧时间轴。`scripts/align_captions.py` 对齐原文短语与词时间戳，详细格式见 [timeline-schema.md](references/timeline-schema.md)。检查差异、专名、数字和收尾；工具只对齐，无法修复漏读，不得用正确字幕掩盖错误声音。
+### Align to the final voice
 
-长句可多镜，短字幕按自然语义切分，英文不拆单词；字幕不必每镜重置。不要按平均字数伪造精确同步。开头慢先检查停顿与拖音，局部缩短或保音高提速，并映射相应字幕和镜头，保留后文。
+Obtain word timestamps from a provider or available ASR service/local model, cached by final audio content hash. Reuse an existing local model; revisions that need no new transcription can map verified old timestamps. Use `align_captions.py` with the locked text and deliberate phrase breaks. Review omissions, numbers and proper nouns. Correct subtitles must not conceal missing speech. Character-rate estimates are not precise alignment.
 
-### 4. 文案语义驱动真实素材自动填充
+Split by meaning, keeping English words intact. Longer sentences can span several shots; captions need not reset at every cut. For a slow opening, inspect pauses and elongated endings before globally speeding up the video. Change only the affected sentence and map its revised times.
 
-为每段写具体视觉描述，`search_shots` 限定本店 `collectionIds`。例如“日光下，客人坐在竹影小院喝茶”，而非只有“茶、治愈”。中文稿也可用完整英文场景描述检索。
+### Fill footage by meaning
 
-对候选用 `get_shot` 核验原片、范围和标签，结合关键帧检查。分数只是排序；画面必须支持文案中的菜品、房型、设施与动作。缺素材就写明缺口，不能把水景当私汤、普通茶杯当三道茶、正餐当早餐。去重不能压倒语义，具象句应锁定匹配素材。
+Query `search_shots` with a concrete visual sentence and allowed `collectionIds`, for example: A guest drinks tea in a sunlit courtyard beside bamboo. This distinguishes real outdoor tea drinking from an empty indoor tea table.
 
-通过 `export_shots` 导出选中镜头，确认成功文件并记录 shot ID、collection ID、原片起点、导出证据和路径。时间线入出点相对于实际导出文件，不把原片时码直接套到裁过的片段。结合真实语音边界形成通常1–2秒镜头，不能截词或冻结尾帧凑时间。
+Use `get_shot` and actual keyframes to verify candidates. Similarity ranks results; it does not prove a match. Dishes, rooms, facilities and actions must support the script and belong to the named business. Report missing footage rather than implying false claims with a vaguely related image: a decorative pond is not a private hot spring, an ordinary cup is not a three-course tea service, and dinner is not breakfast. Do not sacrifice a concrete semantic match merely to avoid repeats.
 
-竖屏逐镜检查脸、招牌、餐盘及设施，显式设置裁切焦点；无法合理裁切就选其他镜头或完整画幅，不能盲目中心裁。主体顺序与身份需一致，相邻尽量不同源。
+Export with `export_shots`. Retain its response, shot ID, collection ID, original offset and exported path. Timeline trims are relative to the exported file; never apply original-media timecodes to a trimmed export. Confirm successful exported files. Use real voice boundaries for roughly 1–2-second shots without cutting words or using frozen tail padding. Keep subject identity and sequence consistent, using different source footage for adjacent shots where practical.
 
-### 5. 合成画面、字幕和音乐
+Inspect vertical crops for faces, signs, plated food and facilities. Set per-shot focus; choose another clip or full-frame fit if cropping would hide key information. Do not blindly center-crop landscape footage.
 
-`scripts/render_video.py` 逐片段渲染、无损拼接，字幕放在视觉处理末尾。尺寸、字体、中英换行按时间线文档设置。ShotAI负责检索/片段导出，本地渲染器负责合成，如实记录分工。ShotAI的EDL/XML导出并不自动包含最终精确配音/字幕时间轴。
+### Render and add music
 
-音乐由用户指定、已授权曲库或可核实允许商业视频同步的来源挑选。免费下载/平台可听不等于商用许可，NC或未知许可不可用于商家成片；抖音/TikTok平台曲库授权也不默认跨平台。保存许可、作者、来源、署名和修改说明，不把本项目音乐打包进技能。
+Follow [Timeline schema](references/timeline-schema.md) and `render_video.py`: separate clip renders, lossless concat, then captions after other visual processing. ShotAI handles retrieval/export; the local renderer handles composition. State this accurately. A ShotAI EDL/XML export is not automatically the final voice/caption timeline.
 
-`scripts/mix_audio.py` 低音量配乐，讲话时压低，首尾渐变，保留人声幅度与时序。避免混音自动归一化让人声变轻。只加音乐时复制视频码流，不改变字幕、剪辑或语速，不重新选镜。
+Music may be owner-supplied, from an established licensed library, or from a verified source allowing commercial synchronization. Free downloads and in-app listening are not licenses. NC, ND or unknown rights are unsuitable for this workflow’s business-video mix. Rights may differ by platform and organic versus paid advertising. Record the actual track, author, source, license evidence, attribution and edits. Do not bundle the job’s music into the skill.
 
-### 6. 检查、交付与清理
+`mix_audio.py` places music quietly beneath speech, ducks it while speech is active and fades its ends. Preserve narrator amplitude and timing; do not let automatic whole-mix normalization lower the voice. Adding music to an existing cut uses video stream copy: do not change picture, captions, opening pace or footage selection.
 
-读 [质量检查与局部修改](references/quality-revisions.md)。验证完整解码、时长/帧数、字幕范围及原稿一致、人声完整、无黑帧/时间线空隙/混音削顶；查看首尾、各镜中点和切点附近。自然度需实际听审，只有ASR或峰值检查时不能声称听过。
+### Verify and deliver
 
-交付 MP4、SRT、固定稿/视角简表、声音音乐选择、发布署名和必要制作记录；不自动发布到抖音/TikTok或创建广告投放。
+Follow [Quality and revisions](references/quality-revisions.md): fully decode, check length/frame count, black frames, timeline gaps, caption bounds and exact copy coverage, complete narration, clipping, peaks and credits. Review opening, ending, shot midpoints and cut boundaries. ASR and meters do not constitute listening; describe the checks actually performed.
 
-产物放用户项目 `<project>/edit/<job>/`，不写技能安装目录。保留源素材引用、稿件、选中声音/许可音乐、字幕、timeline、调用与检查记录。只清理本任务清单内、可重建且无缺失依赖的临时片段/抽帧，默认移入任务回收目录并保存恢复映射；不能清理店主素材、ShotAI库、其他任务或技能本身。
+Deliver MP4, SRT, locked copy/speaker perspective, voice/music settings, credits and concise records. Do not publish posts, create paid campaigns or call unfinished work complete.
 
-## 附带工具
+Write to `<project>/edit/<job>/`, never the skill installation. Preserve source footage references, fixed scripts, selected audio, licensed music, captions, timeline, actual MCP calls, final outputs and QA/reproduction records. Cleanup only an explicit allowlist of this job’s rebuildable intermediates whose dependencies remain available, using recoverable job trash and a restoration manifest. Never clean the owner’s footage, ShotAI library, other jobs or the skill itself.
 
-安装与依赖见 [setup.md](references/setup.md)，先运行 `scripts/preflight.py` 检查。工具为代理编排流水线，不是无人监管的一键发布器。
+## Helpers
 
-- `shotai_client.py`：已配置本地SSE后备客户端。
-- `voice.py`：可选Edge、Qwen公共演示、已有录音；其他平台按适配约定接入。
-- `align_captions.py`：原稿与已有词级ASR对齐、差异报告。
-- `render_video.py`：导出镜头与字幕渲染。
-- `mix_audio.py`：旁白、授权音乐与原视频流混合。
-- `cleanup.py`：显式清单的可恢复临时文件清理。
+Read [Setup](references/setup.md), run `scripts/preflight.py` and use each helper’s `--help`. The agent orchestrates the pipeline; this is not an unattended publishing application.
+
+- `shotai_client.py`: configured local SSE fallback.
+- `voice.py`: Edge, the Qwen public demo or an existing recording; follow the documented adapter contract for other services.
+- `align_captions.py`: locked-copy alignment against existing word-level ASR, with a difference report.
+- `render_video.py`: exported shots and caption rendering.
+- `mix_audio.py`: narration, licensed music and original picture streams.
+- `cleanup.py`: recoverable cleanup of an explicit temporary-file list.

@@ -1,8 +1,9 @@
-# Validation scope / 验证范围
+# Validation scope
+
+[简体中文](validation.zh-CN.md)
 
 The workflow was developed against a real local ShotAI library. Packaged helpers were then exercised independently with synthetic fixtures, so no private footage, tokens or downloaded music is required to inspect this repository.
 
-已在实际本地ShotAI流程基础上提炼工具，再用独立合成数据验证。安装包不包含个人视频、令牌、第三方音乐或模型；仓库独立展示经授权的案例视频，见 examples/CREDITS.md。
 
 | Area | Checks completed |
 |---|---|
@@ -21,3 +22,6 @@ These checks do not certify every current ShotAI version, remote TTS service, OS
 ## Rebuild the language packages
 
 Run python3 tools/package.py from the repository root. The builder includes only skill instructions, references, templates, helpers and requirements. Both entry languages appear in dist/, with SHA-256 hashes in dist/manifest.json.
+## Inline player recheck — 2026-09-24
+
+The third attachment and the actual signed video source both matched the repository file in a complete anonymous download. H.264 High@3.1/yuv420p, AAC-LC stereo, 540×960 at 30 fps and a front-loaded moov box decoded without errors. A browser playback check advanced to 0:15 of 0:50. One initial Range request timed out, then succeeded on retry; the cause was not established. Native video markup and an open/download fallback are retained.

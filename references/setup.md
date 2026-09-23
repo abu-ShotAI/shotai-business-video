@@ -1,110 +1,100 @@
-# 安装与开始 / Setup and quick start
+# Setup and quick start
 
-## 先准备 ShotAI 素材库 / Prepare the ShotAI library first
+Optional documentation: [Chinese setup](zh-CN/setup.md).
 
-**下载客户端 / Download the desktop client: [ShotAI 官网 / Official website](https://www.shotai.io)**
+## Prepare the ShotAI library first
 
-1. 下载并安装 ShotAI 客户端。
-2. 在客户端为本店创建集合，分店素材需要能明确区分。
-3. 将有权使用的视频导入该集合。
-4. 等待镜头分析和索引完成；文件导入不等于已经可以检索。
-5. 在客户端启用 MCP，按当前客户端提供的连接方式接入代理；使用期间保持客户端及 MCP 服务可用。具体界面以当前版本为准。
-6. 先调用 `list_collections` 确认本店集合，再限定该集合运行一条 `search_shots`，确认能返回已入库的素材。接入细节见 [ShotAI MCP](shotai-mcp.md)。
+**Download and install the [ShotAI desktop client](https://www.shotai.io).**
 
-仅在硬盘上存有视频、安装本技能或填写素材路径，都不会让 MCP 自动找到素材。缺素材或搜索无结果时，先核对客户端/服务是否可用、集合是否正确、视频是否已导入且镜头索引完成，再调整搜索描述。
-
-1. Download and install the ShotAI desktop client.
-2. Create a collection for the business in the client, keeping branches distinguishable.
-3. Import videos the owner has the right to use into that collection.
-4. Wait for shot analysis and indexing to finish; importing a file alone does not make it searchable.
-5. Enable MCP in the client and connect the agent using the connection details provided by the current client. Keep the client and MCP service available during use; interface details vary by version.
-6. Call `list_collections` to identify the business's collection, then run one `search_shots` query restricted to it and confirm that indexed footage is returned. See [ShotAI MCP](shotai-mcp.md) for connection details.
+1. Create a collection for the business in the client, keeping branches distinguishable.
+2. Import videos the owner has the right to use into that collection.
+3. Wait for shot analysis and indexing to finish; importing a file alone does not make it searchable.
+4. Enable MCP in the client and connect the agent using the current client's connection details. Keep the client and MCP service available during use; interface details vary by version.
+5. Call `list_collections` to identify the business's collection, then run one `search_shots` query restricted to it and confirm that indexed footage is returned. See [ShotAI MCP](shotai-mcp.md).
 
 Videos stored only on disk, installing this skill, or supplying footage paths do not make footage searchable through MCP. For missing footage or empty results, check client/service availability, the selected collection, import completion and shot indexing before changing the query.
 
-## 安装技能
+## Install the skill and choose languages
 
-把整个 shotai-business-video 目录放进技能目录，例如 ~/.codex/skills/shotai-business-video/。中文包入口是中文，英文包入口是英文；两包同名同运行脚本，选择其一安装，不重复放入发现路径。每包仍有另一语言完整说明，两种语言视频都能制作。新会话调用 $shotai-business-video。
+Place the complete `shotai-business-video` folder in the agent's skills directory, for example `~/.codex/skills/shotai-business-video/`, and invoke `$shotai-business-video` in a new session. This is an agent skill, not a standalone desktop app.
 
-Install the whole shotai-business-video folder in the agent skills directory, e.g. ~/.codex/skills/. Choose the Chinese or English package, not both: the runtime and skill name are identical. Both support separate Chinese and English videos. Invoke $shotai-business-video in a new session. This is an agent skill, not a standalone desktop app.
+Use the English package by default; the Chinese package is an optional documentation entry point. They share the same skill name and runtime, so install **only one** in the discovery path. Both include the other language's instructions and support Chinese (`zh`), English (`en`), or separate videos in both languages (`both`). Communicate in the user's language, select video language explicitly from the request and choose the platform separately. The documentation language does not decide the narration language.
 
-## 前提 / Prerequisites
+## Prerequisites
 
-- 完成上述 ShotAI 素材库准备。优先已配置 MCP 工具；后备 SSE 见 [shotai-mcp.md](shotai-mcp.md)。技能不自动读取数据库令牌、开启服务或扩大权限。
-- Python 3.10+、FFmpeg、FFprobe；Pillow、NumPy、SoundFile。Edge路线需要edge-tts。
-- 中文/英文字体，可传 --font。字体存在仍需检查实际缺字和换行。
-- 最终旁白词时间戳来自TTS或已有ASR服务/本地模型。本技能附对齐器，不附ASR模型；无词时间戳就报告缺项，不伪造同步。
-- 用户授权音乐或可核实许可的音源。本包不含商家素材、API令牌、付费账号或第三方音乐。
+- The indexed ShotAI library and MCP connection described above. Prefer exposed MCP tools; use the [local SSE fallback](shotai-mcp.md) only when appropriate. The skill does not search databases for tokens, enable services or expand permissions.
+- Python 3.10+, FFmpeg/ffprobe, Pillow, NumPy and SoundFile. Edge additionally requires `edge-tts`.
+- Fonts for the requested language. Pass `--font` when needed, then inspect actual glyph coverage and line wrapping.
+- Final-narration word timestamps from TTS or a separately available ASR service/local model. This skill bundles an aligner, not an ASR model. Report missing timestamps instead of fabricating precise synchronization.
+- Owner-authorized music or an independently verified license. The package contains no owner footage, API tokens, paid accounts or third-party music.
 
-An indexed ShotAI library and configured MCP connection are required for footage selection. ASR or provider word timestamps must be available separately. No recognition model, music track or private credential is bundled.
-
-缺库时可用项目隔离环境，不修改系统配置：
+Use a project-local environment for missing Python dependencies:
 
 ```bash
 python3 -m venv .venv
 .venv/bin/python -m pip install Pillow numpy soundfile edge-tts
 ```
 
-Windows uses .venv\Scripts\python.exe instead. Install FFmpeg/FFprobe and required system fonts separately when missing. Paid TTS providers are not automatically configured.
+Windows uses `.venv\Scripts\python.exe` instead. Install FFmpeg/ffprobe and system fonts separately when missing. Paid TTS providers are not automatically configured.
 
-## 示例命令 / Example commands
+## Example commands
 
-从用户项目目录运行，SKILL指向实际技能路径，输出全部放job目录。代理从日常对话补齐brief，不要求店主填写timeline。
+Run from the owner's project. Set `SKILL` to the installed skill's actual path and place every output inside the job directory. The agent derives the production brief from ordinary conversation; the owner need not fill in a timeline.
 
 ```bash
 SKILL="$HOME/.codex/skills/shotai-business-video"
-python3 "$SKILL/scripts/preflight.py" --project . --script script.zh.txt --provider edge
+python3 "$SKILL/scripts/preflight.py" --project . --script script.en.txt --provider edge
 ```
 
-1. 实时MCP检索、关键帧核对与导出，保存调用证据。
-2. 用短文试听，选中后用同一选择记录生成整稿：
+1. Retrieve footage through live MCP, inspect candidate frames, export selected shots and save the actual call evidence.
+2. Audition short text, then reuse the chosen voice record for the complete script:
 
 ```bash
 python3 "$SKILL/scripts/voice.py" --provider edge --list-voices
-python3 "$SKILL/scripts/voice.py" --provider edge --voice zh-CN-XiaoxiaoNeural --lang zh --text-file audition.zh.txt --output edit/job/voice-sample.wav --stage audition
-python3 "$SKILL/scripts/voice.py" --selection edit/job/voice-sample.voice.json --text-file script.zh.txt --output edit/job/narration.wav --stage full --tempo 1.1
+python3 "$SKILL/scripts/voice.py" --provider edge --voice en-US-JennyNeural --lang en --text-file audition.en.txt --output edit/job/voice-sample.wav --stage audition
+python3 "$SKILL/scripts/voice.py" --selection edit/job/voice-sample.voice.json --text-file script.en.txt --output edit/job/narration.wav --stage full --tempo 1.1
 ```
 
-音色ID是例子，按实时列表选择。已有录音：
+The voice ID is an example: choose from the live catalog. To use an existing recording:
 
 ```bash
-python3 "$SKILL/scripts/voice.py" --provider existing --input owner-voice.wav --text-file script.zh.txt --output edit/job/narration.wav
+python3 "$SKILL/scripts/voice.py" --provider existing --input owner-voice.wav --text-file script.en.txt --output edit/job/narration.wav
 ```
 
-3. 获得词级ASR后对齐。phrases.json是按语义拆分且拼回等于原文的短语列表，格式见 [timeline-schema.md](timeline-schema.md)。
+3. Obtain word-level ASR, then align it. `phrases.json` contains deliberate semantic phrases that concatenate to the approved script; see [Timeline schema](timeline-schema.md).
 
 ```bash
-python3 "$SKILL/scripts/align_captions.py" --script script.zh.txt --asr edit/job/asr.json --phrases edit/job/phrases.json --output edit/job/captions.json --report edit/job/alignment-report.json
+python3 "$SKILL/scripts/align_captions.py" --script script.en.txt --asr edit/job/asr.json --phrases edit/job/phrases.json --output edit/job/captions.json --report edit/job/alignment-report.json
 ```
 
-4. 代理用实际语音边界与已核验导出素材生成timeline，渲染字幕画面后混音：
+4. Build the timeline from real voice boundaries and verified exports. Render picture and captions, then mix:
 
 ```bash
 python3 "$SKILL/scripts/render_video.py" edit/job/timeline.json --output edit/job/picture.mp4
-python3 "$SKILL/scripts/mix_audio.py" --video edit/job/picture.mp4 --voice edit/job/narration.wav --music licensed-music.mp3 --music-license edit/job/music-license.json --platform douyin --usage organic --output edit/job/final.zh.mp4
+python3 "$SKILL/scripts/mix_audio.py" --video edit/job/picture.mp4 --voice edit/job/narration.wav --music licensed-music.mp3 --music-license edit/job/music-license.json --platform tiktok --usage organic --output edit/job/final.en.mp4
 ```
 
-无配乐用 --music none，无需许可证。英文使用独立英文稿/音色/ASR/时间轴，平台选tiktok。明确付费广告才用 --usage ads并核对广告许可。
+For no music, use `--music none`; no music license is needed. A Chinese version uses a separate Chinese script, voice, ASR and timeline; choose `douyin` for a Douyin delivery. Use `--usage ads` only for explicitly requested paid advertising and verify advertising rights.
 
-5. 检查交付；只清理显式缓存清单：
+5. Review and deliver. Cleanup uses only an explicit cache allowlist:
 
 ```bash
 python3 "$SKILL/scripts/cleanup.py" --job edit/job --manifest edit/job/cleanup.json
 python3 "$SKILL/scripts/cleanup.py" --job edit/job --manifest edit/job/cleanup.json --apply
 ```
 
-默认dry-run，--apply移至job/.trash/<timestamp>/并记录恢复路径，不永久删除。示例：
+The default is dry-run. `--apply` moves files to `job/.trash/<timestamp>/` and records restoration paths; it does not permanently delete them. Example:
 
 ```json
 {
   "cache_roots": ["render_work"],
-  "preserve": ["final.zh.mp4", "narration.wav", "timeline.json", "music-license.json"],
+  "preserve": ["final.en.mp4", "narration.wav", "timeline.json", "music-license.json"],
   "files": [{"path": "render_work/segment_001.mp4", "rebuildable": true, "reason": "Generated clip; source export remains", "dependencies": ["timeline.json", "exports/shot.mp4"]}]
 }
 ```
 
-## 范围与验证 / Scope and validation
+## Scope and validation
 
-执行前读各工具--help。依赖检查不等于在线TTS/ShotAI认证可用。技术检查不替代语义选镜、裁切/字体目检和声音试听。
+Read each helper's `--help` before use. A dependency check does not establish live TTS/ShotAI authentication or availability. Technical checks do not replace semantic shot selection, crop/font inspection or listening.
 
-本技能做过模拟本地MCP、合成音视频及中英字幕测试；具体结果与限制见分享包旁验证说明。公共TTS配额、音乐使用范围和不同ShotAI版本仍须在实际使用时检查，不承诺未经实测的第三方API。
+The workflow has been tested with simulated local MCP, generated audiovisual fixtures and Chinese/English captions; consult the distribution's validation report for its actual results and limits. Recheck public-TTS quotas, music rights and current ShotAI behavior in each real run. Do not claim support for untested third-party APIs.

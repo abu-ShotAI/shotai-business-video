@@ -1,29 +1,49 @@
 {
-  "version": "1.0.0",
+  "version": "1.0.1",
+  "default_language": "en",
+  "video_language_options": [
+    "en",
+    "zh",
+    "both"
+  ],
   "packages": [
-    {
-      "file": "shotai-business-video-zh.zip",
-      "language": "zh",
-      "bytes": 81919,
-      "sha256": "1e202cc5450af3dd082400af6dbedb257dff1be0eea3acd9b204193d403c1aed"
-    },
-    {
-      "file": "shotai-business-video-zh.skill",
-      "language": "zh",
-      "bytes": 81919,
-      "sha256": "1e202cc5450af3dd082400af6dbedb257dff1be0eea3acd9b204193d403c1aed"
-    },
     {
       "file": "shotai-business-video-en.zip",
       "language": "en",
-      "bytes": 80686,
-      "sha256": "3db0e1c0b29c474f2453cbf5dbf6f0a828203089f8124c17ec8bc8f3d19f10a8"
+      "bytes": 90488,
+      "sha256": "ce24837f2ec5d6a8922c19d3174d9ff504e416c1fd9ada64b3a13c742b175e38"
+    },
+    {
+      "file": "shotai-business-video.zip",
+      "language": "en",
+      "default": true,
+      "bytes": 90488,
+      "sha256": "ce24837f2ec5d6a8922c19d3174d9ff504e416c1fd9ada64b3a13c742b175e38"
     },
     {
       "file": "shotai-business-video-en.skill",
       "language": "en",
-      "bytes": 80686,
-      "sha256": "3db0e1c0b29c474f2453cbf5dbf6f0a828203089f8124c17ec8bc8f3d19f10a8"
+      "bytes": 90488,
+      "sha256": "ce24837f2ec5d6a8922c19d3174d9ff504e416c1fd9ada64b3a13c742b175e38"
+    },
+    {
+      "file": "shotai-business-video.skill",
+      "language": "en",
+      "default": true,
+      "bytes": 90488,
+      "sha256": "ce24837f2ec5d6a8922c19d3174d9ff504e416c1fd9ada64b3a13c742b175e38"
+    },
+    {
+      "file": "shotai-business-video-zh.zip",
+      "language": "zh",
+      "bytes": 95062,
+      "sha256": "60ed83040514015c9025c8aa63d6a65d6463c61f226d87ff87523d3905da18df"
+    },
+    {
+      "file": "shotai-business-video-zh.skill",
+      "language": "zh",
+      "bytes": 95062,
+      "sha256": "60ed83040514015c9025c8aa63d6a65d6463c61f226d87ff87523d3905da18df"
     }
   ],
   "install_one_language_package": true

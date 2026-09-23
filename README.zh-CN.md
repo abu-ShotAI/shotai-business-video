@@ -1,6 +1,8 @@
 # ShotAI 商家短视频
 
-[English](README.md) · [下载 ShotAI 客户端](https://www.shotai.io) · [中文技能包](dist/shotai-business-video-zh.zip) · [English skill package](dist/shotai-business-video-en.zip)
+[English](README.md) | [简体中文](README.zh-CN.md)
+
+[下载技能（默认英文）](dist/shotai-business-video.zip) · [下载 ShotAI 客户端](https://www.shotai.io) · [可选中文入口包](dist/shotai-business-video-zh.zip)
 
 把固定文案和自己的素材，制作成带配音、字幕与配乐的抖音/TikTok信息流视频。适合有自有素材的餐厅、咖啡馆、民宿、酒店及本地店铺小老板。
 
@@ -36,7 +38,9 @@ https://github.com/user-attachments/assets/b3c42749-7872-4aab-86a3-2302c9a12cc0
 
 **50.57秒 · 32镜 · 1080×1920竖屏原片 · 英文旁白与字幕。** 本次实际运行已安装技能：实时ShotAI MCP检索导出、Jenny英文配音(+5%)、词级字幕对齐、逐镜竖屏裁切与轻柔器乐混音。
 
-https://github.com/user-attachments/assets/e68fa9ce-2b94-46c9-86fc-a12b413e9f52
+<video src="https://github.com/user-attachments/assets/e68fa9ce-2b94-46c9-86fc-a12b413e9f52" controls="controls" width="360">
+  <a href="docs/examples/english-tiktok-slow-weekend.mp4">打开英文 TikTok 视频</a>
+</video>
 
 [打开MP4](docs/examples/english-tiktok-slow-weekend.mp4) · [下载MP4](https://raw.githubusercontent.com/abu-ShotAI/shotai-business-video/main/docs/examples/english-tiktok-slow-weekend.mp4) · [英文稿](docs/examples/english-tiktok-script.txt) · [SRT字幕](docs/examples/english-tiktok.srt)
 
@@ -44,7 +48,7 @@ https://github.com/user-attachments/assets/e68fa9ce-2b94-46c9-86fc-a12b413e9f52
 
 配乐：**Clear Air — Kevin MacLeod**（[官方来源](https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100626)），按 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) 使用；进行了节选、淡入淡出、音量调整及人声混音，讲话时压低配乐。
 
-**视频与封面经用户授权展示，不自动适用代码的MIT许可。** [制作信息与素材署名](docs/examples/CREDITS.md)。本流程没有向TikTok账号发布视频。
+**视频与封面经用户授权展示，不自动适用代码的MIT许可。** [制作信息与素材署名](docs/examples/CREDITS.zh-CN.md)。本流程没有向TikTok账号发布视频。
 
 ## 第一次使用：先准备素材库
 
@@ -55,13 +59,13 @@ https://github.com/user-attachments/assets/e68fa9ce-2b94-46c9-86fc-a12b413e9f52
 5. **在客户端中启用/配置 MCP，再连接你的 AI 助手。** 按当前安装版本的实际设置操作；检索和导出期间保持客户端与本地 MCP 服务可用。
 6. **先验证一次。** 让助手列出集合，选中本店，再搜索“客人在庭院喝茶”之类具体画面。确认返回的是自己的素材后再制作成片。
 
-如果搜不到，先检查客户端/服务是否运行、集合是否选对、素材是否入库、索引是否完成。尚未入库的文件不会因为多换几个关键词就出现。详见 [MCP接入说明](references/shotai-mcp.md)。
+如果搜不到，先检查客户端/服务是否运行、集合是否选对、素材是否入库、索引是否完成。尚未入库的文件不会因为多换几个关键词就出现。详见 [MCP接入说明](references/zh-CN/shotai-mcp.md)。
 
 ## 安装技能
 
-下载 [中文包](dist/shotai-business-video-zh.zip) 或 [英文包](dist/shotai-business-video-en.zip)，解压后把 shotai-business-video 目录放入技能目录。Codex通常为 ~/.codex/skills/。新会话调用 $shotai-business-video。
+默认下载 [英文主入口包](dist/shotai-business-video.zip)；偏好中文操作说明可选 [中文入口包](dist/shotai-business-video-zh.zip)。解压后把 shotai-business-video 目录放入技能目录。Codex通常为 ~/.codex/skills/。新会话调用 $shotai-business-video。
 
-两个包是同一技能的不同入口语言，功能与名称相同，选择一个安装即可，不必重复安装。两者都能分别生成中文视频和英文视频。
+两个包功能和技能名相同，只安装一份。默认技能和技术文档以英文为主，中文集中在独立说明页；对话跟随用户语言。文档语言与视频语言无关：可选择英文、中文，或分别生成两个语言版本，不需要安装两份技能。
 
 ## 直接这样说
 
@@ -88,10 +92,10 @@ https://github.com/user-attachments/assets/e68fa9ce-2b94-46c9-86fc-a12b413e9f52
 
 内置Edge、Qwen官方公共演示和本地录音接口；其他生产TTS按文档接入。演示服务存在配额，音色与音乐的使用条款仍需按实际场景确认。抖音/TikTok、自然发布与付费广告的音乐授权不能默认互通。
 
-ShotAI负责检索和片段导出，本地FFmpeg/Pillow负责最终画面、字幕和音频合成。只改配乐时保留原视频码流。详细说明：[安装](references/setup.md) · [中文流程](references/workflow.zh.md) · [声音与配乐](references/voice-music.md)。
+ShotAI负责检索和片段导出，本地FFmpeg/Pillow负责最终画面、字幕和音频合成。只改配乐时保留原视频码流。详细说明：[安装](references/zh-CN/setup.md) · [中文流程](references/workflow.zh.md) · [声音与配乐](references/zh-CN/voice-music.md)。
 
 ## 验证与许可
 
-已完成模拟MCP、合成音视频、中英字幕渲染、混音和独立场景检查，范围见 [验证说明](docs/validation.md)。不将离线测试等同所有线上服务可用。
+已完成模拟MCP、合成音视频、中英字幕渲染、混音和独立场景检查，范围见 [验证说明](docs/validation.zh-CN.md)。不将离线测试等同所有线上服务可用。
 
-技能脚本和文档采用 [MIT](LICENSE)，展示视频与封面不在该授权范围内，见 [案例使用说明](docs/examples/CREDITS.md)。客户端、服务、音乐、字体及视频素材各自遵循其许可。技能安装ZIP不含个人素材、凭据或音乐；仓库案例视频独立展示并附配乐署名。
+技能脚本和文档采用 [MIT](LICENSE)，展示视频与封面不在该授权范围内，见 [案例使用说明](docs/examples/CREDITS.zh-CN.md)。客户端、服务、音乐、字体及视频素材各自遵循其许可。技能安装ZIP不含个人素材、凭据或音乐；仓库案例视频独立展示并附配乐署名。

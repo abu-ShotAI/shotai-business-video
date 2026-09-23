@@ -8,13 +8,13 @@ Turn approved business copy and your own footage into narrated Douyin or TikTok 
 
 ## Real production examples
 
-The first two examples are Chinese landscape productions from the workflow that informed this skill. The third is a new **English 9:16 TikTok example made by running the installed skill**. Click a preview image to open its MP4 file, or use the video links below. The repository contains compact web copies.
+The first two examples are Chinese landscape productions from the workflow that informed this skill. The third is a new **English 9:16 TikTok example made by running the installed skill**. Play each video directly below. Download links remain available as an alternative.
 
 ### 1. A weekend to rest / 把周末留给休息
 
 **58.57 seconds · 38 shots · 1–2 seconds per shot.** An urban worker's weekend-reset perspective, with gentle guitar beneath the narration.
 
-[![A weekend to rest — video preview](docs/examples/weekend-reset.jpg)](docs/examples/weekend-reset.mp4)
+https://github.com/user-attachments/assets/4e346fcc-edd9-48c1-bbdb-3a33e30f3384
 
 [Open MP4](docs/examples/weekend-reset.mp4) · [Download MP4](https://raw.githubusercontent.com/abu-ShotAI/shotai-business-video/main/docs/examples/weekend-reset.mp4) · [Poster](docs/examples/weekend-reset.jpg)
 
@@ -24,7 +24,7 @@ Music: **Clear Air — Kevin MacLeod** ([official source](https://incompetech.co
 
 **68.93 seconds · 44 shots · 1–2 seconds per shot.** A slow traveler's view of the rooms, breakfast and tea, with a tightened opening and gentle piano.
 
-[![Make the stay part of the journey — video preview](docs/examples/slow-stay-details.jpg)](docs/examples/slow-stay-details.mp4)
+https://github.com/user-attachments/assets/b3c42749-7872-4aab-86a3-2302c9a12cc0
 
 [Open MP4](docs/examples/slow-stay-details.mp4) · [Download MP4](https://raw.githubusercontent.com/abu-ShotAI/shotai-business-video/main/docs/examples/slow-stay-details.mp4) · [Poster](docs/examples/slow-stay-details.jpg)
 
@@ -36,7 +36,7 @@ The two Chinese examples reuse previously selected footage from an indexed ShotA
 
 **50.57 seconds · 32 shots · 1080×1920 master · English narration and captions.** Created with the installed skill: live ShotAI MCP retrieval/export, Edge Jenny narration at +5%, word-level caption alignment, individually reviewed portrait crops and quiet instrumental music.
 
-[![English TikTok example — vertical video preview](docs/examples/english-tiktok-slow-weekend.jpg)](docs/examples/english-tiktok-slow-weekend.mp4)
+https://github.com/user-attachments/assets/e68fa9ce-2b94-46c9-86fc-a12b413e9f52
 
 [Open MP4](docs/examples/english-tiktok-slow-weekend.mp4) · [Download MP4](https://raw.githubusercontent.com/abu-ShotAI/shotai-business-video/main/docs/examples/english-tiktok-slow-weekend.mp4) · [English script](docs/examples/english-tiktok-script.txt) · [SRT](docs/examples/english-tiktok.srt)
 

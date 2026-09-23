@@ -2,7 +2,7 @@
 
 The workflow was developed against a real local ShotAI library. Packaged helpers were then exercised independently with synthetic fixtures, so no private footage, tokens or downloaded music is required to inspect this repository.
 
-已在实际本地ShotAI流程基础上提炼工具，再用独立合成数据验证。仓库不包含个人视频、令牌、第三方音乐或模型。
+已在实际本地ShotAI流程基础上提炼工具，再用独立合成数据验证。安装包不包含个人视频、令牌、第三方音乐或模型；仓库独立展示经授权的案例视频，见 examples/CREDITS.md。
 
 | Area | Checks completed |
 |---|---|

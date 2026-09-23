@@ -6,6 +6,32 @@
 
 **必须先下载 ShotAI 客户端，再把素材入库并完成索引。** 本技能不提供素材库；ShotAI MCP 只能找到已经导入 ShotAI、完成分析和索引的视频。只安装技能、只把文件放在硬盘或只提供文件夹路径，都不能让素材自动变得可搜索。
 
+## 实际制作案例
+
+以下为用户已完成的南浔民宿视频，也是本技能提炼所依据的实作案例。两条均为 **中文 Serena 旁白、16:9横屏**，不作为英文或竖屏演示。可直接播放，也提供仓库内MP4副本。
+
+### 1. 把周末留给休息
+
+**58.57秒 · 38镜 · 每镜1–2秒。** 都市上班族的周末放松视角，配轻柔吉他。
+
+https://github.com/user-attachments/assets/31d9a406-c23d-4756-81d4-076114994406
+
+[观看或下载MP4](docs/examples/weekend-reset.mp4) · [封面](docs/examples/weekend-reset.jpg)
+
+配乐：**Clear Air — Kevin MacLeod**（[官方来源](https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100626)），按 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) 使用；进行了节选、淡入淡出、音量调整与旁白混音。
+
+### 2. 把住处也当作旅程
+
+**68.93秒 · 44镜 · 每镜1–2秒。** 慢旅行者关注空间、早餐和茶饮的视角，已优化首句节奏并加入轻柔钢琴。
+
+https://github.com/user-attachments/assets/4b476ab9-2685-42ee-afb3-17863197647b
+
+[观看或下载MP4](docs/examples/slow-stay-details.mp4) · [封面](docs/examples/slow-stay-details.jpg)
+
+配乐：**Meditation Impromptu 01 — Kevin MacLeod**（[官方来源](https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100163)），按 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) 使用；进行了节选、淡入淡出、音量调整与旁白混音。
+
+案例沿用已入库ShotAI素材的既有选镜记录，第二条开头两镜在修订时重新通过实时MCP检索和导出，制作先于技能工具打包。网页提供1080p原片的960×540预览副本，声音和时长保留。**视频与封面经用户授权展示，不自动适用代码的MIT许可。** [制作信息与素材署名](docs/examples/CREDITS.md)。
+
 ## 第一次使用：先准备素材库
 
 1. **从 [ShotAI 官网](https://www.shotai.io) 下载、安装并打开客户端。**
@@ -54,4 +80,4 @@ ShotAI负责检索和片段导出，本地FFmpeg/Pillow负责最终画面、字�
 
 已完成模拟MCP、合成音视频、中英字幕渲染、混音和独立场景检查，范围见 [验证说明](docs/validation.md)。不将离线测试等同所有线上服务可用。
 
-技能脚本和文档采用 [MIT](LICENSE)；客户端、服务、音乐、字体及视频素材各自遵循其许可。包内不含个人素材、凭据或第三方音乐。
+技能脚本和文档采用 [MIT](LICENSE)，展示视频与封面不在该授权范围内，见 [案例使用说明](docs/examples/CREDITS.md)。客户端、服务、音乐、字体及视频素材各自遵循其许可。技能安装ZIP不含个人素材、凭据或音乐；仓库案例视频独立展示并附配乐署名。

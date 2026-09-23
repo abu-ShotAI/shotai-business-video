@@ -6,6 +6,32 @@ Turn approved business copy and your own footage into narrated Douyin or TikTok 
 
 **Install the ShotAI desktop client and import your footage first.** This skill is not a stock-video service. ShotAI MCP can find only footage that has been added to the ShotAI library and finished its analysis/indexing. Installing this skill or supplying a folder path does not make disk files searchable.
 
+## Real production examples
+
+These are the user's actual Nanxun guesthouse videos from the workflow that informed this skill. Both use **Chinese Serena narration and a 16:9 layout**; they are not examples of English or vertical output. Click play below; compact [MP4 copies](docs/examples/) are also available in the repository.
+
+### 1. A weekend to rest / 把周末留给休息
+
+**58.57 seconds · 38 shots · 1–2 seconds per shot.** An urban worker's weekend-reset perspective, with gentle guitar beneath the narration.
+
+https://github.com/user-attachments/assets/31d9a406-c23d-4756-81d4-076114994406
+
+[Watch or download MP4](docs/examples/weekend-reset.mp4) · [Poster](docs/examples/weekend-reset.jpg)
+
+Music: **Clear Air — Kevin MacLeod** ([official source](https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100626)), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Excerpted, faded, level-adjusted and mixed under narration.
+
+### 2. Make the stay part of the journey / 把住处也当作旅程
+
+**68.93 seconds · 44 shots · 1–2 seconds per shot.** A slow traveler's view of the rooms, breakfast and tea, with a tightened opening and gentle piano.
+
+https://github.com/user-attachments/assets/4b476ab9-2685-42ee-afb3-17863197647b
+
+[Watch or download MP4](docs/examples/slow-stay-details.mp4) · [Poster](docs/examples/slow-stay-details.jpg)
+
+Music: **Meditation Impromptu 01 — Kevin MacLeod** ([official source](https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100163)), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Excerpted, faded, level-adjusted and mixed under narration.
+
+The examples reuse previously selected footage from an indexed ShotAI library; the second video's revised opening used two fresh MCP searches/exports. They predate the packaged helpers. Web previews are 960×540 copies of the 1080p originals with the audio and duration preserved. **Example media is displayed with user authorization and is not licensed under the code's MIT license.** [Production details and media credits](docs/examples/CREDITS.md).
+
 ## Start here: prepare the footage library
 
 1. **Download and install [ShotAI](https://www.shotai.io).** Open the desktop client.
@@ -50,7 +76,7 @@ Default delivery is 1080×1920 at 30 fps, normally 35–80 seconds. Your fixed s
 - Python 3.10+, FFmpeg/FFprobe, the libraries in [requirements.txt](requirements.txt), and suitable fonts.
 - Provider word timestamps or an available ASR service/local model. An ASR model is not bundled.
 - Built-in voice routes: Edge, the official Qwen public demo, and existing recordings. Other production providers use the documented adapter contract. Demo quotas and provider usage terms still apply.
-- Music must cover the intended platform and commercial use. Paid ads may require different rights. No third-party music or private media is included.
+- Music must cover the intended platform and commercial use. Paid ads may require different rights. Installable skill archives contain no footage or music; the separately published examples above include credited music.
 
 ShotAI handles footage search and clip export; local FFmpeg/Pillow tools compose video, captions and audio. A music-only edit copies the existing picture stream. See [full setup](references/setup.md), [English workflow](references/workflow.en.md), [voice/music](references/voice-music.md), and [timeline format](references/timeline-schema.md).
 
@@ -60,4 +86,4 @@ Local mock-MCP tests, synthetic audio/video checks, Chinese portrait and English
 
 ## License
 
-MIT for the skill's scripts and documentation. ShotAI, provider services, models, footage, fonts and music retain their own terms. See [LICENSE](LICENSE).
+MIT for the skill's scripts and documentation. The example videos and posters are excluded from that grant; see [media rights](docs/examples/CREDITS.md). ShotAI, provider services, models, footage, fonts and music retain their own terms. See [LICENSE](LICENSE).

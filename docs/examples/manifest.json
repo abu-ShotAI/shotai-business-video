@@ -1,0 +1,63 @@
+{
+  "examples": [
+    {
+      "title": "把周末留给休息",
+      "video": "weekend-reset.mp4",
+      "poster": "weekend-reset.jpg",
+      "github_attachment": "https://github.com/user-attachments/assets/31d9a406-c23d-4756-81d4-076114994406",
+      "seconds": 58.566667,
+      "shots": 38,
+      "language": "zh",
+      "voice": "Qwen3 Serena",
+      "aspect_ratio": "16:9",
+      "preview_resolution": [
+        960,
+        540
+      ],
+      "original_resolution": [
+        1920,
+        1080
+      ],
+      "fps": 30,
+      "sha256": "14d09b0d47e8d866f8f1e50d6ca4d8739f383a6e41a79a1fc764a8facd100c19",
+      "music": {
+        "title": "Clear Air",
+        "author": "Kevin MacLeod",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "source": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100626"
+      },
+      "rights": "Display only; media is excluded from repository MIT license."
+    },
+    {
+      "title": "把住处也当作旅程",
+      "video": "slow-stay-details.mp4",
+      "poster": "slow-stay-details.jpg",
+      "github_attachment": "https://github.com/user-attachments/assets/4b476ab9-2685-42ee-afb3-17863197647b",
+      "seconds": 68.933333,
+      "shots": 44,
+      "language": "zh",
+      "voice": "Qwen3 Serena",
+      "aspect_ratio": "16:9",
+      "preview_resolution": [
+        960,
+        540
+      ],
+      "original_resolution": [
+        1920,
+        1080
+      ],
+      "fps": 30,
+      "sha256": "0ef4b71ffe6c6ac98e3784179dc231acffb86ec6000adad5aa0d19c7bbe49327",
+      "music": {
+        "title": "Meditation Impromptu 01",
+        "author": "Kevin MacLeod",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "source": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100163"
+      },
+      "rights": "Display only; media is excluded from repository MIT license."
+    }
+  ],
+  "media_in_install_archives": false
+}
